@@ -37,6 +37,8 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
  * @property string $url
  * @property Theme $theme
  * @property Link[] $links
+ * @property Urls[] $links
+ * @property Visit[] $links
  * @property DateTimeImmutable $created_at
  * @property DateTimeImmutable $updated_at
  */
@@ -102,6 +104,11 @@ class User extends AbstractModel implements AuthenticatableContract, Authorizabl
         return $this->hasMany(Link::class);
     }
 
+    public function urls(): HasMany
+    {
+        return $this->hasMany(Urls::class);
+    }
+
     public function socialLinks(): HasMany
     {
         return $this->links()->where('type', 'Social');
@@ -127,5 +134,19 @@ class User extends AbstractModel implements AuthenticatableContract, Authorizabl
     {
         return $this->hasManyThrough(Metric::class, Link::class, 'reference_id')
             ->where('reference_type', MetricReferenceType::LINK);
+    }
+
+    public function signature(): string
+    {
+        if (auth()->check() === false) {
+            return hash('sha3-256', implode([
+                'ip'      => request()->ip(),
+                'browser' => \Browser::browserFamily(),
+                'os'      => \Browser::platformFamily(),
+                'device'  => \Browser::deviceFamily().\Browser::deviceModel(),
+            ]));
+        }
+
+        return (string) auth()->id();
     }
 }

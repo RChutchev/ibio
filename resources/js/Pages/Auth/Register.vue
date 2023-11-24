@@ -96,7 +96,7 @@
         },
 
         mounted() {
-            document.title = 'Register' + ' | IBio';
+            document.title = 'Register' + ' | ' + app_name;
         },
 
         methods: {

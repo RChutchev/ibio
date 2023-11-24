@@ -40,7 +40,7 @@
         @endif
     </main>
     <footer>
-        <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" height="10">
+        <img src="{{ asset('images/Yourl.Asia-logo.png') }}" alt="{{ config('app.name') }}" height="10">
     </footer>
     <script>
         document.addEventListener('click', event => {

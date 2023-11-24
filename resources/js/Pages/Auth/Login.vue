@@ -85,7 +85,7 @@
         },
 
         mounted() {
-            document.title = 'Login' + ' | IBio';
+            document.title = 'Login' + ' | ' + app_url;
         },
 
         methods: {

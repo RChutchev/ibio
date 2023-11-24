@@ -35,131 +35,175 @@
                     <!--    </template>-->
                     <!--    Dashboard-->
                     <!--</v-sidebar-item>-->
-                    <v-sidebar-item :href="route('links')" :active="route().current('links')">
-                        <template #icon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                                />
-                            </svg>
-                        </template>
-                        Links
-                    </v-sidebar-item>
-                    <v-sidebar-item
-                        :href="route('social-links')"
-                        :active="route().current('social-links')"
-                    >
-                        <template #icon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
-                                />
-                            </svg>
-                        </template>
-                        Social Links
-                    </v-sidebar-item>
-                    <!--<v-sidebar-item :href="route('settings')" :active="route().current('settings')">-->
-                    <!--    <template #icon>-->
-                    <!--        <svg-->
-                    <!--            xmlns="http://www.w3.org/2000/svg"-->
-                    <!--            class="h-5 w-5"-->
-                    <!--            fill="none"-->
-                    <!--            viewBox="0 0 24 24"-->
-                    <!--            stroke="currentColor"-->
-                    <!--            stroke-width="2"-->
-                    <!--        >-->
-                    <!--            <path-->
-                    <!--                stroke-linecap="round"-->
-                    <!--                stroke-linejoin="round"-->
-                    <!--                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"-->
-                    <!--            />-->
-                    <!--            <path-->
-                    <!--                stroke-linecap="round"-->
-                    <!--                stroke-linejoin="round"-->
-                    <!--                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"-->
-                    <!--            />-->
-                    <!--        </svg>-->
-                    <!--    </template>-->
-                    <!--    Settings-->
-                    <!--</v-sidebar-item>-->
-                    <v-sidebar-item
-                        :href="route('appearance')"
-                        :active="route().current('appearance')"
-                    >
-                        <template #icon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
-                                />
-                            </svg>
-                        </template>
-                        Appearance
-                    </v-sidebar-item>
-                    <v-sidebar-item :href="route('profile')" :active="route().current('profile')">
-                        <template #icon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                />
-                            </svg>
-                        </template>
-                        Profile
-                    </v-sidebar-item>
-                    <v-sidebar-item :href="route('metrics')" :active="route().current('metrics')">
-                        <template #icon>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                class="h-5 w-5"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
-                                />
-                            </svg>
-                        </template>
-                        Page Metrics
-                    </v-sidebar-item>
+                    <v-accordion-nav>
+                        <v-accordion-item>
+                            <template #header>
+                                <p>Short Urls</p>
+                            </template>
+                            <template #content>
+                                <v-sidebar-item :href="route('short-urls')" :active="route().current('short-urls')">
+                                    <template #icon>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                                            />
+                                        </svg>
+                                    </template>
+                                    Short Urls
+                                </v-sidebar-item>
+                                <v-sidebar-item :href="route('short-urls.metrics')" :active="route().current('short-urls/metrics')">
+                                    <template #icon>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                                            />
+                                        </svg>
+                                    </template>
+                                    Url Metrics
+                                </v-sidebar-item>
+                            </template>
+                        </v-accordion-item>
+                    </v-accordion-nav>
+                    
+                    <v-accordion-nav>
+                        <v-accordion-item>
+                            <template #header>
+                                <p>Bio Link</p>
+                            </template>
+                            <template #content>
+                                <v-sidebar-item :href="route('links')" :active="route().current('links')">
+                                    <template #icon>
+                                        <svg fill="none" viewBox="0 0 20 20" height="20" width="20"><path fill="#273144" d="M11.667 6.667a1.667 1.667 0 11-3.334 0 1.667 1.667 0 013.334 0zM12.5 14.167c0 .5-.333.833-.833.833H8.333c-.5 0-.833-.333-.833-.833 0-.5.333-.834.833-.834h3.334c.5 0 .833.334.833.834zM8.333 11.667h3.334c.5 0 .833-.334.833-.834 0-.5-.333-.833-.833-.833H8.333c-.5 0-.833.333-.833.833 0 .5.333.834.833.834z"></path><path fill="#273144" fill-rule="evenodd" d="M5.833 1.667h8.334c.916 0 1.666.75 1.666 1.666v13.334c0 .916-.75 1.666-1.666 1.666H5.833c-.916 0-1.666-.75-1.666-1.666V3.333c0-.916.75-1.666 1.666-1.666zm0 1.666v13.334h8.334V3.333H5.833z" clip-rule="evenodd"></path></svg>
+                                    </template>
+                                    Links
+                                </v-sidebar-item>
+                                <v-sidebar-item
+                                    :href="route('social-links')"
+                                    :active="route().current('social-links')"
+                                >
+                                    <template #icon>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
+                                            />
+                                        </svg>
+                                    </template>
+                                    Social Links
+                                </v-sidebar-item>
+                                <!--<v-sidebar-item :href="route('settings')" :active="route().current('settings')">-->
+                                <!--    <template #icon>-->
+                                <!--        <svg-->
+                                <!--            xmlns="http://www.w3.org/2000/svg"-->
+                                <!--            class="h-5 w-5"-->
+                                <!--            fill="none"-->
+                                <!--            viewBox="0 0 24 24"-->
+                                <!--            stroke="currentColor"-->
+                                <!--            stroke-width="2"-->
+                                <!--        >-->
+                                <!--            <path-->
+                                <!--                stroke-linecap="round"-->
+                                <!--                stroke-linejoin="round"-->
+                                <!--                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"-->
+                                <!--            />-->
+                                <!--            <path-->
+                                <!--                stroke-linecap="round"-->
+                                <!--                stroke-linejoin="round"-->
+                                <!--                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"-->
+                                <!--            />-->
+                                <!--        </svg>-->
+                                <!--    </template>-->
+                                <!--    Settings-->
+                                <!--</v-sidebar-item>-->
+                                <v-sidebar-item
+                                    :href="route('appearance')"
+                                    :active="route().current('appearance')"
+                                >
+                                    <template #icon>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
+                                            />
+                                        </svg>
+                                    </template>
+                                    Appearance
+                                </v-sidebar-item>
+                                <v-sidebar-item :href="route('profile')" :active="route().current('profile')">
+                                    <template #icon>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                                            />
+                                        </svg>
+                                    </template>
+                                    Profile
+                                </v-sidebar-item>
+                                <v-sidebar-item :href="route('metrics')" :active="route().current('metrics')">
+                                    <template #icon>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="h-5 w-5"
+                                            fill="none"
+                                            viewBox="0 0 24 24"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M8 13v-1m4 1v-3m4 3V8M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                                            />
+                                        </svg>
+                                    </template>
+                                    Page Metrics
+                                </v-sidebar-item>
+                            </template>
+                        </v-accordion-item>
+                    </v-accordion-nav>
                 </div>
             </div>
 
@@ -286,8 +330,7 @@
                             <slot></slot>
                         </div>
                     </main>
-
-                    <preview v-if="$page.props.preview && $page.props.user.username" />
+                    <preview v-if="($page.props.preview & !isShortUrl) && $page.props.user.username" />
                 </div>
             </div>
         </div>
@@ -309,6 +352,8 @@
     import VSidebar from "@/Components/Sidebar";
     import VSidebarItem from "@/Components/SidebarItem";
     import VSecondaryButton from "@/Components/SecondaryButton";
+    import VAccordionNav from "@/Components/AccordionNav";
+    import VAccordionItem from "@/Components/AccordionItem";
 
     export default {
         components: {
@@ -326,6 +371,8 @@
             VDropdownLink,
             VNavLink,
             VResponsiveNavLink,
+            VAccordionNav,
+            VAccordionItem
         },
 
         data() {
@@ -341,7 +388,7 @@
         },
 
         mounted() {
-            document.title = this.$page.props.title + " | IBio";
+            document.title = this.$page.props.title + " | " + this.$page.props.app_name;
         },
 
         methods: {
@@ -353,5 +400,15 @@
                 this.$inertia.post(route("logout"));
             },
         },
+
+        computed: {
+            isShortUrl() {
+                return this.$page.url === '/short-urls'
+            },
+
+            isShowPreview(){
+                return this.$page.url === '/short-urls'
+            }
+        }
     };
 </script>

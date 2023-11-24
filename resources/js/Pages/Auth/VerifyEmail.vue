@@ -47,7 +47,7 @@
         },
 
         mounted() {
-            document.title = 'Verify Email' + ' | IBio';
+            document.title = 'Verify Email' + ' | ' + app_name;
         },
 
         methods: {

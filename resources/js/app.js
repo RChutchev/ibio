@@ -28,3 +28,7 @@ app.mount("#app");
 InertiaProgress.init({
     color: "#4179f5",
 });
+
+app.config.globalProperties.app_url = process.env.MIX_APP_URL
+app.config.globalProperties.app_name = process.env.MIX_APP_NAME
+

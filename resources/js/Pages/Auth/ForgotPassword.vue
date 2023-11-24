@@ -62,7 +62,7 @@
         },
 
         mounted() {
-            document.title = 'Forgot Password' + ' | IBio';
+            document.title = 'Forgot Password' + ' | ' + app_name;
         },
 
         methods: {

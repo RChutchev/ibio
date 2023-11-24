@@ -1,14 +1,14 @@
 @extends('layouts.home')
 
 @section('page-title')
-    {{ __("Privacy Policy | iBio") }}
+    {{ __("Privacy Policy | ") . config('app.name') }}
 @endsection
 
 @section('content')
     <div class="container w-full py-20 px-5 mx-auto px-5" style="min-height: calc(100vh - 134px)">
         <div class="prose-xl">
             <h1>{{ __("Privacy Policy") }}</h1>
-            <p>iBio has been built on privacy!</p>
+            <p>{{ config('app.name') }} has been built on privacy!</p>
             <h2>Data</h2>
             <p>Here are a list of data that we store:</p>
             <ul>

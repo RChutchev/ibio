@@ -75,7 +75,7 @@
         },
 
         mounted() {
-            document.title = 'Two Factor Authentication' + ' | IBio';
+            document.title = 'Two Factor Authentication' + ' | ' + app_name;
         },
 
         methods: {

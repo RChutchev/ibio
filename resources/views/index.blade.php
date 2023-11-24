@@ -12,7 +12,7 @@
     <div class="w-full flex flex-col items-center justify-center py-20 px-5">
         <div class="text-center">
             <h1 class="font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-primary-800 to-primary-600">{{ __("Get one link for all of your links!") }}</h1>
-            <p class="text-xl mt-5">{{ __("With iBio you can simply put all of your links into one and share it on your social media") }}</p>
+            <p class="text-xl mt-5">{{ __("With " . config('app.name') . " you can simply put all of your links into one and share it on your social media") }}</p>
         </div>
         <div class="container flex items-center justify-center mt-10">
             <div class="card-carousel-container w-full">
@@ -59,11 +59,6 @@
                 <div class="text-4xl mt-3">{{ \App\Models\Theme::query()->whereNull('user_id')->count() }}</div>
             </div>
         </div>
-    </div>
-    <div class="w-full flex flex-col items-center justify-center bg-white py-20 px-5">
-        <h2 class="font-bold text-3xl text-transparent bg-clip-text bg-gradient-to-r from-primary-800 to-primary-600">Open Source</h2>
-        <p class="mt-10 text-xl">iBio is <b>FREE</b> and <b>open source</b> and will remain like that! You can find the source code on <a href="https://github.com/saeedvaziry/ibio" class="text-primary-600" target="_blank">Github</a>.</p>
-        <p class="mt-2 text-xl">Developers are welcome to fork the repository and propose changes to bring more features to it or bug fixes.</p>
     </div>
 @endsection
 

@@ -52,7 +52,7 @@
         },
 
         mounted() {
-            document.title = 'Confirm Password' + ' | IBio';
+            document.title = 'Confirm Password' + ' | ' + app_name;
         },
 
         methods: {
