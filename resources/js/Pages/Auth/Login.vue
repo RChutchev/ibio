@@ -85,7 +85,7 @@
         },
 
         mounted() {
-            document.title = 'Login' + ' | ' + app_url;
+            document.title = 'Login' + ' | ' + config.app_name;
         },
 
         methods: {

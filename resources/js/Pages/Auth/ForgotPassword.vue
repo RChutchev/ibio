@@ -62,7 +62,7 @@
         },
 
         mounted() {
-            document.title = 'Forgot Password' + ' | ' + app_name;
+            document.title = 'Forgot Password' + ' | ' + config.app_name;
         },
 
         methods: {

@@ -20,5 +20,11 @@
     @routes
     @include('extensions.google')
     @include('extensions.cookie')
+    <script>
+        var config = {
+            app_url : "{{ config('app.url') }}",
+            app_name : "{{ config('app.name') }}",
+        };
+    </script>
 </body>
 </html>

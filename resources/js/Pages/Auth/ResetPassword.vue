@@ -66,7 +66,7 @@
         },
 
         mounted() {
-            document.title = 'Reset Password' + ' | ' + app_name;
+            document.title = 'Reset Password' + ' | ' + config.app_name;
         },
 
         methods: {

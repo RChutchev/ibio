@@ -52,7 +52,7 @@
         },
 
         mounted() {
-            document.title = 'Confirm Password' + ' | ' + app_name;
+            document.title = 'Confirm Password' + ' | ' + config.app_name;
         },
 
         methods: {

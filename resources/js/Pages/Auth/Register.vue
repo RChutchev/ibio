@@ -96,7 +96,7 @@
         },
 
         mounted() {
-            document.title = 'Register' + ' | ' + app_name;
+            document.title = 'Register' + ' | ' + config.app_name;
         },
 
         methods: {

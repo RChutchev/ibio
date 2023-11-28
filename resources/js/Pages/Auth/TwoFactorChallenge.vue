@@ -75,7 +75,7 @@
         },
 
         mounted() {
-            document.title = 'Two Factor Authentication' + ' | ' + app_name;
+            document.title = 'Two Factor Authentication' + ' | ' + config.app_name;
         },
 
         methods: {

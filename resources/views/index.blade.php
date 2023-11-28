@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('page-title')
-    {{ __("iBio | Your only one bio link") }}
+    {{ __(config('app.name') . " | Your only one bio link") }}
 @endsection
 
 @push('styles')
@@ -64,4 +64,10 @@
 
 @push('scripts')
     <script src="{{ asset('js/carousel.js') }}"></script>
+    <script>
+        var config = {
+            app_url : "{{ config('app.url') }}",
+            app_name : "{{ config('app.name') }}",
+        };
+    </script>
 @endpush

@@ -47,7 +47,7 @@
         },
 
         mounted() {
-            document.title = 'Verify Email' + ' | ' + app_name;
+            document.title = 'Verify Email' + ' | ' + config.app_name;
         },
 
         methods: {
