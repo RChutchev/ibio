@@ -54,6 +54,8 @@
         background-color: {{ $theme->avatar_bg }};
         color: {{ $theme->avatar_text_color }};
         font-size: 30px;
+        -o-object-fit: cover;
+        object-fit: cover;
     }
 
     .title {
