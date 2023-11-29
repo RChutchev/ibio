@@ -4,13 +4,13 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Get one link for all of your links">
-    <meta name="keywords" content="With iBio you can simply put all of your links into one and share it on your social media">
+    <meta name="keywords" content="With {{ config('app.name') }} you can simply put all of your links into one and share it on your social media">
     <title>@yield('page-title')</title>
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url('/') }}">
     <meta property="og:title" content="{{ config('app.name') }}">
-    <meta property="og:description" content="With iBio you can simply put all of your links into one and share it on your social media">
+    <meta property="og:description" content="With {{ config('app.name') }} you can simply put all of your links into one and share it on your social media">
     <meta property="og:image" content="{{ asset('static/favicon/android-chrome-192x192.png') }}">
     @include('extensions.favicon')
     @stack('styles')
@@ -18,7 +18,7 @@
 <body class="bg-gray-100 overflow-x-hidden">
     <nav class="bg-white w-full h-16 shadow-sm rounded-b-3xl flex items-center justify-center">
         <div class="container flex items-center justify-between px-5">
-            <a href="/"><img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" class="h-10"></a>
+            <a href="/"><img src="{{ asset('images/Yourl.Asia-logo.png') }}" alt="{{ config('app.name') }}" class="h-10"></a>
             <div class="flex items-center justify-end">
                 <a href="{{ route('terms') }}">{{ __("Terms") }}</a>
                 <a href="{{ route('policy') }}" class="ml-5">{{ __("Policy") }}</a>

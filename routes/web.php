@@ -8,6 +8,8 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\SocialLinkController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ShortUrlController;
+use App\Http\Controllers\UrlRedirectController;
 
 Route::prefix('oauth')->group(function () {
     Route::get('google', [GoogleController::class, 'redirect']);
@@ -42,13 +44,20 @@ Route::middleware('auth')->group(function () {
     Route::get('/social-links', [SocialLinkController::class, 'index'])->name('social-links');
     Route::post('/social-links', [SocialLinkController::class, 'store']);
     Route::delete('/social-links/{link}', [SocialLinkController::class, 'delete'])->name('social-links.delete');
+
+    // Short Url
+    Route::get('/short-urls', [ShortUrlController::class, 'index'])->name('short-urls');
+    Route::post('/short-urls', [ShortUrlController::class, 'store']);
+    Route::delete('/short-urls/{url}', [ShortUrlController::class, 'delete'])->name('short-urls.delete');
+    Route::get('/short-urls/metrics', [MetricController::class, 'index'])->name('short-urls.metrics');
 });
 
 Route::view('/', 'index')->name('home');
 Route::view('/terms', 'terms')->name('terms');
 Route::view('/policy', 'policy')->name('policy');
+Route::get('/{url:keyword}', UrlRedirectController::class);
 
 Route::group(['middleware' => 'block-crawlers'], function () {
-    Route::get('/{username}', [PageController::class, 'show'])->name('page.show');
+    Route::get('/m/{username}', [PageController::class, 'show'])->name('page.show');
     Route::post('/{username}/metrics/{link?}', [PageController::class, 'storeMetric'])->name('page.metrics');
 });
