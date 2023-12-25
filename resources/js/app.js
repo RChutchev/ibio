@@ -31,4 +31,3 @@ InertiaProgress.init({
 
 app.config.globalProperties.app_url = process.env.MIX_APP_URL
 app.config.globalProperties.app_name = process.env.MIX_APP_NAME
-
