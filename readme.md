@@ -43,6 +43,12 @@ php artisan key:generate
 php artisan migrate
 ```
 
+5) Link storage
+
+```shell
+php artisan storage:link
+```
+
 ## Admin Dashboard
 
 iBio now has an admin dashboard 🎉
