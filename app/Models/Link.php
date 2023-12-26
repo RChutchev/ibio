@@ -7,6 +7,7 @@ use App\LinkTypes\LinkTypeInterface;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -24,6 +25,9 @@ use Illuminate\Support\Facades\Storage;
  */
 class Link extends AbstractModel
 {
+    const GUEST_ID = null;
+
+    const GUEST_NAME = 'Guest';
     use HasFactory;
 
     protected $fillable = [
@@ -98,5 +102,12 @@ class Link extends AbstractModel
             $this->thumbnail_disk = 'url';
         }
         $this->save();
+    }
+
+    protected function userId(): Attribute
+    {
+        return Attribute::make(
+            set: fn ($value) => $value === 0 ? self::GUEST_ID : $value,
+        );
     }
 }
