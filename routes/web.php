@@ -56,7 +56,7 @@ Route::view('/', 'index')->name('home');
 Route::view('/terms', 'terms')->name('terms');
 Route::view('/policy', 'policy')->name('policy');
 Route::get('/{url:keyword}', UrlRedirectController::class);
-Route::post('/guest/links/create', [LinkController::class, 'guestStore'])->name('guest.links.create');
+Route::post('/short-urls', [ShortUrlController::class, 'guestStore'])->name('guest.short-urls.create');
 
 Route::group(['middleware' => 'block-crawlers'], function () {
     Route::get('/m/{username}', [PageController::class, 'show'])->name('page.show');

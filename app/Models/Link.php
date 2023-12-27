@@ -104,10 +104,4 @@ class Link extends AbstractModel
         $this->save();
     }
 
-    protected function userId(): Attribute
-    {
-        return Attribute::make(
-            set: fn ($value) => $value === 0 ? self::GUEST_ID : $value,
-        );
-    }
 }

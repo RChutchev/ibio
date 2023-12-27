@@ -60,7 +60,7 @@
                                     </template>
                                     Short Urls
                                 </v-sidebar-item>
-                                <v-sidebar-item :href="route('short-urls.metrics')" :active="route().current('short-urls/metrics')">
+                                <!-- <v-sidebar-item :href="route('short-urls.metrics')" :active="route().current('short-urls/metrics')">
                                     <template #icon>
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@
                                         </svg>
                                     </template>
                                     Url Metrics
-                                </v-sidebar-item>
+                                </v-sidebar-item> -->
                             </template>
                         </v-accordion-item>
                     </v-accordion-nav>

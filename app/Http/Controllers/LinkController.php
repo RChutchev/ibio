@@ -107,12 +107,4 @@ class LinkController extends Controller
         return redirect()->route('links');
     }
 
-    public function guestStore(): RedirectResponse
-    {
-        print_r($this->getUser());
-        die();
-        app(CreateLink::class)->create($this->getUser());
-
-        return redirect()->route('links');
-    }
 }

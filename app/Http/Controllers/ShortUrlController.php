@@ -13,6 +13,7 @@ use App\Actions\Urls\CreateUrl;
 use App\Http\Resources\UrlsResource;
 use App\Models\Link;
 use App\Models\Urls;
+use App\Models\User;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\RedirectResponse;
 use Inertia\Response;
@@ -41,9 +42,22 @@ class ShortUrlController extends Controller
 
     public function store(): RedirectResponse
     {
-        app(CreateUrl::class)->create($this->getUser());
-        
+        app(CreateUrl::class)->create();
+
         return redirect()->route('short-urls');
+    }
+
+    public function guestStore(): string
+    {
+        $url = app(CreateUrl::class)->create();
+        
+        $attr = $url->getAttributes();
+        $longUrl = $attr['destination'];
+        $shortUrl = url($attr['keyword']);
+        
+        $html = view('components.ShortUrls.created', compact('longUrl', 'shortUrl'))->render();
+
+        return $html;
     }
 
     public function updateSort(): RedirectResponse
