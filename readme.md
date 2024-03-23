@@ -1,14 +1,10 @@
-# iBio
+# iBio fork
 
 <img width="962" alt="image" src="https://user-images.githubusercontent.com/61919774/212568139-15fe6c31-cc9e-42f4-a2a7-ea42d12fb105.png">
 
 IBio is a free bio link generator for social media like Instagram, TikTok, etc
 
-You can register and get your link and share it on your social media.
-
-The master branch is available on https://ibio.link
-
-Sample link: https://ibio.link/saeedvaziry
+You can register, get your link, and share it on your social media.
 
 ## Features
 
@@ -75,7 +71,7 @@ The back-end has been developed with [Laravel framework 9](https://github.com/la
 
 ### Database
 
-Database is Mysql or Mariadb
+The database is Mysql or MariaDB
 
 ### Front-End
 
@@ -110,7 +106,7 @@ User-Agent by [jenssegers](https://github.com/jenssegers/agent)
 
 ## Security
 
-In case you see any security issues please send it to me directly at (sa.vaziry@gmail.com) or create an issue
+In case you see any security issues please send them to me directly at (RChutchev@gmail.com) or create an issue.
 
 ## License
 
