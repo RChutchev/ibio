@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'IBio'),
+    'name' => env('APP_NAME', 'Yourl'),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
-    'domain' => env('APP_DOMAIN', 'ibio.link'),
+    'domain' => env('APP_DOMAIN', 'yourl.asia'),
 
     'asset_url' => env('ASSET_URL'),
 

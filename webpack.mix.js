@@ -1,4 +1,5 @@
 const mix = require("laravel-mix");
+var dotenv = require('dotenv').config({path:'../../.env'});
 
 mix.js("resources/js/app.js", "public/js")
     .vue()

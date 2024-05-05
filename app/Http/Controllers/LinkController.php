@@ -106,4 +106,5 @@ class LinkController extends Controller
 
         return redirect()->route('links');
     }
+
 }

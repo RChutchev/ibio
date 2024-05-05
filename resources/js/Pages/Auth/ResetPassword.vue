@@ -66,7 +66,7 @@
         },
 
         mounted() {
-            document.title = 'Reset Password' + ' | IBio';
+            document.title = 'Reset Password' + ' | ' + config.app_name;
         },
 
         methods: {
